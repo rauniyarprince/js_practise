@@ -12,6 +12,10 @@ console.log(1 + 2 + "3"); //treat number because first preference is number and 
 
 console.log("type = " ,typeof(1 + 2 + "3")); 
 
+//comparison
+console.log("2" == 2); // convert the datatype and check
+console.log("2" === 2); //strict check with  datatype 
+
 
 
 
