@@ -17,6 +17,7 @@ const newobj = {
       address: "pratappur",
       state: "uttarpradesh",
       pincode: "273185",
+      
     },
     current_address: {
       address: "Lucknow",
@@ -52,6 +53,7 @@ console.log(objall)
 
 const bestobj = { ...obj1, ...obj2 }
 console.log(bestobj)
+
 
 
 // array of objects (used in database)

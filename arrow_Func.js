@@ -34,10 +34,8 @@ console.log(this);
 // inside object method → `this = object`
 
 
-// Normal function
-function chai() {
+ /* normal func*/function chai() {
   let username = "prince";
-
   // this does NOT refer to this function's local variables
   // it refers to global object
   console.log(this.username); 
@@ -55,31 +53,25 @@ const chai2 = () => {
 };
 chai2(); // undefined
 
-
-
 // ++++++++++++ ARROW FUNCTION +++++++++++++++
-
 
 // (1) Explicit return arrow function
 const arrowfunc = (num, num2) => {
   // manually return value
   return num + num2;
 };
-
 console.log("addition =", arrowfunc(5, 4));
 
 
 //  (2) Implicit return arrow function
 const arrowfunc2 = (num, num2) => num - num2;
 // no need to write return keyword
-
 console.log("subtract =", arrowfunc2(5, 4));
 
 
 // (3) Single parameter implicit return
 const arrowfunc3 = (num) => num * num;
 // if single expression → no need of {} and return
-
 console.log("square =", arrowfunc3(6));
 
 
@@ -87,17 +79,12 @@ console.log("square =", arrowfunc3(6));
 const arrowfunc4 = () => ({ user: "prince" });
 // object return karte time () use karna zaruri hai
 // otherwise {} ko block samjha jayega
-
 console.log(arrowfunc4());
 
-
 // this = calling object (in normal function)
-
 // normal function → this = global object
 // arrow function → this = outer scope
-
 // arrow function ka apna this nahi hota
 // ye parent ka this use karta hai
-
 // implicit return → no need of return keyword
 // explicit return → return likhna padta hai
