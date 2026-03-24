@@ -32,7 +32,7 @@ const myobject = {
   game1: "cricket",
   game2: "football",
   game3: "hockey",
-};
+};  
 for (const key in myobject) {
   console.log(key, ":", myobject[key]);
 }
@@ -50,12 +50,12 @@ for (const key in programming) {
 const coding = ["c", "java", "python",  "php"];
 
 // normal function
-coding.forEach(function (val) {
+coding.forEach(function (val) { // you can give parameter anything
   console.log(val);
 });
 
 // arrow function
-coding.forEach((item) => {
+coding.forEach((item) => { // you can give parameter anything 
   console.log(item);
 });
 
@@ -63,9 +63,14 @@ coding.forEach((item) => {
 function printMe(item) {
   console.log(item);
 }
-coding.forEach(printMe);
+coding.forEach(printMe); // given reference
 
 // with index and full array
-coding.forEach((item, index, arr) => {
+coding.forEach((item, index, arr) => { // for each store the three different default value(index,item,arr)
   console.log(item, index, arr);
 });
+const mycoding =[ 
+  {
+    languagename : javascri
+  }
+]
