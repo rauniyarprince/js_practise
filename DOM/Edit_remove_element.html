@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM | chai aur code</title>
+</head>
+<body style = "background-color: #212121;  color:white;">
+  <ul class="language">
+    <li>Javascript</li>
+  </ul>
+</body>
+<script>
+  function  addlanguage(langName){
+    const li = document.createElement('li')
+    li.innerHTML = `${langName}`
+    document.querySelector('.language').appendChild(li)
+  }
+  addlanguage("python")
+   addlanguage("JAVA")
+
+   function addOptiLanguage(LangName){
+    const li = document.createElement
+    ('li')  
+    li.appendChild( document.createTextNode(langName)) 
+  // const addText = document.createTextNode(langName)
+  // li.appendChild(addText) 
+
+  document.querySelector('.language').appendChild(li)
+}
+
+addlanguage('golang');
+
+// Edit
+const secondLang = document.querySelector("li:nth-child(2)");
+// secondLang.innerHTML = "UPDATE Lang (Python)"
+
+
+const newli = document.createElement('li')
+newli.textContent = "Update Lang"
+secondLang.replaceWith(newli)
+
+// edit
+
+const FirstLang = document.querySelector("li:first-child")
+FirstLang.outerHTML = '<li>TypeScript</li>' 
+
+
+// remove
+const lastlang = document.querySelector('li:last-child')
+lastlang.remove()
+</script>
+</html>

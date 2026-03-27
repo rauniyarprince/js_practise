@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM | Chai Aur Code</title>
+</head>
+<body style ="background-color: #212121;color:white">
+</body>
+<script>
+  const div = document.createElement('div')
+  console.log(div);
+  div.className ="main";
+  div.id = Math.round(Math.random() *10 + 1) ;
+  // multiple item set in the key value pair
+  div.setAttribute("title","generated title") // ye usme lake add kar deta h 
+  div.style.color = "green"
+  div.style.fontSize = "15px";
+ // div.innerText = "create a new element" // ye us value ko lata h tb jake usme add karta h 
+
+ // first create node than append
+ const addtext = document.createTextNode("Create a new element");
+ div.appendChild(addtext);
+
+ // add in the webpage
+ document.body.appendChild(div)
+  </script>
+</html>
