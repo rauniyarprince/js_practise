@@ -8,8 +8,6 @@
 html, body {
   height: 100%;
   font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
   background: #fff;
   color: #212121;
 }
@@ -40,15 +38,16 @@ nav a:hover {
 
 /* MAIN CONTENT */
 main.canvas {
-  flex: 1; /* pushes footer to bottom */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 40px 20px;
+  min-height: calc(100vh - 70px); /* adjust according to nav + footer height */
 }
 
+/* BUTTONS */
 .buttons-container {
   margin: 20px 0;
 }
@@ -75,8 +74,11 @@ main.canvas {
 #purple { background: rgb(133, 106, 237); }
 #brown { background: rgb(56, 27, 27); }
 
-/* FOOTER */
+/* FOOTER - FIXED & RESPONSIVE */
 .sticky-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
   padding: 15px 0;
   background-color: #eee;
@@ -85,4 +87,5 @@ main.canvas {
   font-weight: bold;
   border-top: 1px solid #aaa;
   box-shadow: 0 -3px 8px rgba(0,0,0,0.2);
+  z-index: 999; /* ensures footer is always on top */
 }

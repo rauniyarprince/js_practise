@@ -1,9 +1,11 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BODY */
 body {
   font-family: sans-serif;
   text-align: center;
@@ -44,8 +46,9 @@ nav a:hover {
   color: white;
 }
 
+/* MAIN */
 main {
-  flex: 1; /* footer sticky bottom */
+  flex: 1; /* pushes footer to bottom */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,14 +124,41 @@ button:hover {
   transform: scale(1.1);
 }
 
-/* STICKY FOOTER */
+/* FOOTER */
 .sticky-footer {
   width: 100%;
   padding: 15px 0;
-  background-color: #eee; /* navbar color */
-  color: #212121;          /* navbar text color */
+  background-color: #eee;
+  color: #212121;
   text-align: center;
   font-weight: bold;
   border-top: 1px solid #aaa;
   box-shadow: 0 -3px 8px rgba(0,0,0,0.2);
+
+  /* Scroll ke saath natural bottom */
+  position: relative; 
+  margin-top: auto; 
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+  .board {
+    grid-template-columns: repeat(3, 80px);
+    gap: 8px;
+  }
+
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+
+  button {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
 }

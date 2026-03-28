@@ -1,31 +1,31 @@
+/* RESET */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* BODY */
 body {
   font-family: system-ui, sans-serif;
   color: black;
   background-color: white;
 
-  /* Flex layout to keep footer at bottom */
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; /* ensures footer at bottom */
 }
 
 /* NAVBAR */
 nav {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* left logo, right menu */
+  justify-content: space-between;
   padding: 10px 20px;
   border-bottom: 1px solid #aaa;
   background-color: #eee;
 }
 
-/* LOGO (Left Corner) */
 .logo {
   font-size: 24px;
   font-weight: bold;
@@ -34,7 +34,6 @@ nav {
   letter-spacing: 1px;
 }
 
-/* NAV LINK (Right Side) */
 nav a {
   text-decoration: none;
   padding: 8px 15px;
@@ -44,33 +43,37 @@ nav a {
   transition: 0.3s;
 }
 
-/* ACTIVE LINK */
 nav a[aria-current='page'] {
   background-color: #d4d4d4;
 }
 
-/* HOVER EFFECT */
 nav a:hover {
   background-color: #212121;
   color: white;
 }
 
-/* MAIN */
+/* MAIN CONTENT */
 main {
+  flex: 1; /* takes remaining space, pushes footer to bottom */
   padding: 1rem;
-  flex: 1; /* Makes main take remaining space so footer stays at bottom */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* HEADING */
 h1 {
   font-weight: bold;
   font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
 /* PROJECT SECTION */
 .projects {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 500px;
 }
 
 /* PROJECT LINKS */
@@ -83,6 +86,7 @@ h1 {
   border: 2px solid #212121;
   margin-top: 10px;
   transition: 0.3s;
+  text-align: center;
 }
 
 /* HOVER EFFECT */
@@ -96,9 +100,33 @@ h1 {
   width: 100%;
   padding: 15px 0;
   background-color: #eee; /* Same as navbar */
-  color: #212121;          /* Text color same as navbar */
+  color: #212121;
   text-align: center;
   font-weight: bold;
   border-top: 1px solid #aaa;
   box-shadow: 0 -3px 8px rgba(0,0,0,0.2);
+
+  position: relative; /* ensures footer is at natural bottom */
+  margin-top: auto;   /* works with flex to push footer down */
+}
+
+/* RESPONSIVE */
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  .project-link {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  nav {
+    padding: 10px 15px;
+  }
+
+  nav a {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
 }

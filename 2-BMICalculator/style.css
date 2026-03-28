@@ -6,7 +6,7 @@
 }
 
 html, body {
-  height: 100%;
+  min-height: 100%;
   font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
@@ -40,7 +40,7 @@ nav a:hover {
 
 /* MAIN CONTENT */
 main.container {
-  flex: 1; /* pushes footer to bottom */
+  flex: 1; /* footer ke liye space push karta hai */
   max-width: 420px;
   margin: 40px auto;
   padding: 30px;
@@ -106,7 +106,7 @@ button:hover {
   color: #555;
 }
 
-/* STICKY FOOTER */
+/* FOOTER (scroll ke saath) */
 .sticky-footer {
   width: 100%;
   padding: 15px 0;
@@ -116,4 +116,6 @@ button:hover {
   font-weight: bold;
   border-top: 1px solid #aaa;
   box-shadow: 0 -3px 8px rgba(0,0,0,0.2);
+  position: relative; /* scroll ke saath move karega */
+  margin-top: auto;   /* content ke end me push karega */
 }
