@@ -1,92 +1,87 @@
-/* Body */
-body {
+/* RESET */
+* {
   margin: 0;
-  padding: 0px;
-  background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
   font-family: 'Poppins', sans-serif;
-}
-
-/* Top buttons (Home + Youtube) */
-.top-links {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+  color: #212121;
 }
 
-/* Buttons (Home / Youtube) */
-.top-links button {
+/* NAVBAR */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   padding: 10px 20px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #aaa;
+  background-color: #eee;
+}
 
-  background: #fff;
-  color: #333;
-
-  cursor: pointer;
+nav a {
+  text-decoration: none;
+  padding: 8px 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: black;
   transition: 0.3s;
 }
 
-.top-links button:hover {
-  background: #4facfe;
-  color: #fff;
+nav a:hover {
+  background-color: #4facfe;
+  color: white;
 }
 
-/* Container (center card) */
-.container {
+/* MAIN CONTENT */
+main.container {
+  flex: 1; /* pushes footer to bottom */
   max-width: 420px;
-  margin: 0 auto;
+  margin: 40px auto;
   padding: 30px;
-
   background: #ffffff;
   border-radius: 20px;
-
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   text-align: center;
 }
 
-/* Heading */
 h1 {
   margin-bottom: 20px;
   color: #333;
 }
 
-/* Inputs */
-#height,
-#weight {
+input[type="text"] {
   width: 100%;
   height: 45px;
   margin-top: 15px;
-
   border-radius: 10px;
   border: 1px solid #ccc;
-
   padding: 10px;
   font-size: 16px;
-
   outline: none;
 }
 
-#height:focus,
-#weight:focus {
+input[type="text"]:focus {
   border-color: #4facfe;
   box-shadow: 0 0 6px rgba(79, 172, 254, 0.3);
 }
 
-/* Button */
+/* BUTTON */
 button {
   width: 100%;
   height: 45px;
   margin-top: 20px;
-
   border: none;
   border-radius: 10px;
-
   font-size: 18px;
   font-weight: 600;
-
   cursor: pointer;
   transition: 0.3s;
-
   background: linear-gradient(135deg, #4facfe, #00c6ff);
   color: #fff;
 }
@@ -96,7 +91,7 @@ button:hover {
   box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
 }
 
-/* Result */
+/* RESULT */
 #results {
   margin-top: 20px;
   font-size: 28px;
@@ -104,9 +99,21 @@ button:hover {
   color: #4facfe;
 }
 
-/* Guide */
+/* WEIGHT GUIDE */
 #weight-guide {
   margin-top: 20px;
   font-size: 14px;
   color: #555;
+}
+
+/* STICKY FOOTER */
+.sticky-footer {
+  width: 100%;
+  padding: 15px 0;
+  background-color: #eee;
+  color: #212121;
+  text-align: center;
+  font-weight: bold;
+  border-top: 1px solid #aaa;
+  box-shadow: 0 -3px 8px rgba(0,0,0,0.2);
 }
