@@ -9,47 +9,64 @@ body {
   background-color: white;
 }
 
+/* NAVBAR */
 nav {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
-  gap: 0.5rem;
-  border-bottom: solid 1px #aaa;
+  justify-content: space-between; /* left logo, right menu */
+  padding: 10px 20px;
+  border-bottom: 1px solid #aaa;
   background-color: #eee;
 }
 
-nav a {
-  display: inline-block;
-  min-width: 9rem;
-  padding: 0.5rem;
-  border-radius: 0.2rem;
-  border: solid 1px rgb(22, 22, 22);
-  text-align: center;
-  text-decoration: none;
-  color: #1b1b1b;
+/* LOGO (Left Corner) */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #212121;
+  margin: 0;
+  letter-spacing: 1px;
 }
 
+/* NAV LINK (Right Side) */
+nav a {
+  text-decoration: none;
+  padding: 8px 15px;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: black;
+  transition: 0.3s;
+}
+
+/* ACTIVE LINK */
 nav a[aria-current='page'] {
-  color: #000;
   background-color: #d4d4d4;
 }
 
+/* HOVER EFFECT 🔥 */
+nav a:hover {
+  background-color: #212121;
+  color: white;
+}
+
+/* MAIN */
 main {
   padding: 1rem;
 }
 
+/* HEADING */
 h1 {
   font-weight: bold;
   font-size: 1.5rem;
 }
 
+/* PROJECT SECTION */
 .projects {
   display: flex;
   flex-direction: column;
 }
 
+/* PROJECT LINKS */
 .project-link {
   background-color: #fff;
   padding: 10px 30px;
@@ -57,5 +74,12 @@ h1 {
   color: #212121;
   text-decoration: none;
   border: 2px solid #212121;
-  margin-top: 5px;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT 🔥 */
+.project-link:hover {
+  background-color: #212121;
+  color: #fff;
 }

@@ -1,7 +1,3 @@
-
-
-
-
 const buttons = document.querySelectorAll('.button') 
 // select all elements with class "button" (returns a NodeList)
 
@@ -46,7 +42,5 @@ buttons.forEach(function (button) {
     if(e.target.id === 'brown'){
       body.style.backgroundColor = e.target.id 
     }
-
-
   })
 });
