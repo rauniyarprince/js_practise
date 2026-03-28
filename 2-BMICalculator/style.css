@@ -108,6 +108,9 @@ button:hover {
 
 /* FOOTER (scroll ke saath) */
 .sticky-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
   padding: 15px 0;
   background-color: #eee;
@@ -116,6 +119,5 @@ button:hover {
   font-weight: bold;
   border-top: 1px solid #aaa;
   box-shadow: 0 -3px 8px rgba(0,0,0,0.2);
-  position: relative; /* scroll ke saath move karega */
-  margin-top: auto;   /* content ke end me push karega */
+  z-index: 999; /* ensures footer is always on top */
 }
