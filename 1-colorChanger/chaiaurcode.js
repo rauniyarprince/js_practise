@@ -8,7 +8,7 @@ buttons.forEach(function (button) {
   // printing each button in console
 
   button.addEventListener('click',function(e){
-  // adding click event on each button
+  // adding click event on each button 
 
     console.log(e); 
     // logs the full event object
