@@ -24,20 +24,20 @@
     alert("this is owl image");
   }*/ 
 
-//   document.getElementById('images').addEventListener('click',function(e){
-//   console.log("clicked inside the url")
-//   },false)
+  document.getElementById('images').addEventListener('click',function(e){
+  console.log("clicked inside the url")
+  },false)
 
-//   document.getElementById('owl').addEventListener('click',function(e){
-//   console.log("owl clicked")
-//   e.stopPropagation()// for prevent bublling
-//   },false)
+  document.getElementById('owl').addEventListener('click',function(e){
+  console.log("owl clicked")
+  e.stopPropagation()// for prevent bublling
+  },false)
 
-// document.getElementById('google').addEventListener('click',function(e){
-//   e.preventDefault();
-//   e.stopPropagation()
-//   console.log("google clicked"); 
-// },false)
+document.getElementById('google').addEventListener('click',function(e){
+  e.preventDefault();
+  e.stopPropagation()
+  console.log("google clicked"); 
+},false)
 
 document.querySelector('#images').addEventListener('click',function(e){
   console.log(e.target.tagName);
