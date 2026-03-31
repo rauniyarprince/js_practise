@@ -63,7 +63,6 @@ function checkWinner() {
   }
 }
 
-//  RESTART FIXED
 restartBtn.addEventListener('click', () => {
   board = ["", "", "", "", "", "", "", "", ""];
   gameActive = true;

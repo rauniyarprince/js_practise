@@ -1,25 +1,33 @@
-
 table,
-      th,
-      td {
-        border: 1px solid #e7e7e7;
-      }
-      .project {
-        background-color: #1c1c1c;
-        color: #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        height: 100vh;
-      }
+th,
+td {
+  border: 1px solid #e7e7e7;
+}
 
-      .color {
-        color: aliceblue;
-        display: flex;
-        flex-direction: row;
-      }
-      .sticky-footer {
+.project {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+
+#note {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.color {
+  color: aliceblue;
+  display: flex;
+  flex-direction: row;
+}
+
+.sticky-footer {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -30,6 +38,7 @@ table,
   text-align: center;
   font-weight: bold;
   border-top: 1px solid #aaa;
-  box-shadow: 0 -3px 8px rgba(0,0,0,0.2);
-  z-index: 999; /* ensures footer is always on top */
+  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  /* ensures footer is always on top */
 }
