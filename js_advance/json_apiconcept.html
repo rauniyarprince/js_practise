@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API handling</title>
+  <h2>
+    XMLHttpRequest:(Legacy Method)
+  </h2>
+  <p>XMLHttpRequest (XHR) is a JavaScript object that allows a browser to send and receive data from a server without
+    reloading the page.<br>[EventTarget
+    <---- XMLHttpRequestEventTarget <---- XMLHttpRequest]<br>[readyState → request ka status (0 to 4)]
+      [status → HTTP status (200 = success)]
+      [responseText → server se aaya data]
+  </p>
+</head>
+<table border=1>
+  <tr>
+    <td>Value</td>
+    <td>State</td>
+    <td>Meaning</td>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>UNSENT</td>
+    <td>Client has been created. open() not called yet.</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>OPEND</td>
+    <td>open() has been called.</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>HEADERS_RECIEVED</td>
+    <td>send() has been called, and headers and status are available.(request received)</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>LOADING</td>
+    <td>Downloading: responseText holds partial data.(processing)</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>DONE</td>
+    <td>The operation is complete.(response ready)</td>
+  </tr>
+</table>
+
+<body>
+  <script>
+    const requestUrl = 'https://api.github.com/users/rauniyarprince'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', requestUrl)// Two Parameters(metod,urlstring)
+    xhr.onreadystatechange = function () {
+      console.log(xhr.readyState);
+      if (xhr.readyState === 4) {
+        const data = JSON.parse(this.responseText) // store and shows text in object
+        console.log(data)
+         console.log("Name:", data.name)
+          console.log("ID:",data.id)
+           console.log("Location:",data.location)
+
+
+      }
+    }
+    xhr.send() // call manually xhr 
+  </script 
+</body>
+</html>
